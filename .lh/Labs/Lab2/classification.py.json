@@ -1,0 +1,154 @@
+{
+    "sourceFile": "Labs/Lab2/classification.py",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 34,
+            "patches": [
+                {
+                    "date": 1774322770113,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1774322817912,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,1 @@\n+import torch\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1774323376785,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,10 @@\n-import torch\n\\ No newline at end of file\n+# References:\n+# https://www.tensorflow.org/datasets/catalog/oxford_iiit_pet\n+\n+\n+\n+import Tensorflow as tf\n+import \n+\n+\n+dataset = tf.keras.datasets()\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1774323385993,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,5 +6,5 @@\n import Tensorflow as tf\n import \n \n \n-dataset = tf.keras.datasets()\n\\ No newline at end of file\n+dataset = tf.keras.datasets('oxford_iiit_pet')\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1774323392041,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,8 +3,8 @@\n \n \n \n import Tensorflow as tf\n-import \n \n \n+\n dataset = tf.keras.datasets('oxford_iiit_pet')\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1774323515468,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,8 @@\n # https://www.tensorflow.org/datasets/catalog/oxford_iiit_pet\n \n \n \n-import Tensorflow as tf\n+import tensorflow as tf\n+import tensorflow_datasets as tfds\n \n-\n\\ No newline at end of file\n-\n-dataset = tf.keras.datasets('oxford_iiit_pet')\n+train, test = tfds.load('oxford_iiit_pet')\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1774323573431,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,7 +3,6 @@\n \n \n \n import tensorflow as tf\n-import tensorflow_datasets as tfds\n \n-train, test = tfds.load('oxford_iiit_pet')\n\\ No newline at end of file\n+train, test = tf.data.Datasets.load('oxford_iiit_pet')\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1774323599647,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,5 +4,5 @@\n \n \n import tensorflow as tf\n \n-train, test = tf.data.Datasets.load('oxford_iiit_pet')\n\\ No newline at end of file\n+train, test = tf.data.Dataset.load('oxford_iiit_pet')\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1774323709088,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,6 +3,7 @@\n \n \n \n import tensorflow as tf\n+import tensorlfow-datasets as tfds\n \n\\ No newline at end of file\n-train, test = tf.data.Dataset.load('oxford_iiit_pet')\n+train, test = tfds.load('oxford_iiit_pet')\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1774323753783,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,7 +3,7 @@\n \n \n \n import tensorflow as tf\n-import tensorlfow-datasets as tfds\n+import tensorlfow_datasets as tfds\n \n train, test = tfds.load('oxford_iiit_pet')\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1774323786873,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,6 +4,7 @@\n \n \n import tensorflow as tf\n import tensorlfow_datasets as tfds\n+import matplotlib.pyplot asplt\n \n train, test = tfds.load('oxford_iiit_pet')\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1774323794475,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,7 +4,7 @@\n \n \n import tensorflow as tf\n import tensorlfow_datasets as tfds\n-import matplotlib.pyplot asplt\n+import matplotlib.pyplot as plt\n \n train, test = tfds.load('oxford_iiit_pet')\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1774323988205,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,12 @@\n+# References:\n+# https://www.tensorflow.org/datasets/catalog/oxford_iiit_pet\n+# https://www.tensorflow.org/datasets/overview\n+\n+\n+\n+\n+import tensorflow as tf\n+import tensorlfow_datasets as tfds\n+import matplotlib.pyplot as plt\n+\n+dataset = tfds.load('oxford_iiit_pet', split='train',  shuffle_files=True)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1774324063734,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,18 +5,8 @@\n \n \n \n import tensorflow as tf\n-import tensorlfow_datasets as tfds\n+import tensorflow_datasets as tfds\n import matplotlib.pyplot as plt\n \n-dataset = tfds.load('oxford_iiit_pet', split='train',  shuffle_files=True)\n-# References:\n-# https://www.tensorflow.org/datasets/catalog/oxford_iiit_pet\n-\n-\n-\n-import tensorflow as tf\n-import tensorlfow_datasets as tfds\n-import matplotlib.pyplot as plt\n-\n\\ No newline at end of file\n-train, test = tfds.load('oxford_iiit_pet')\n+dataset = tfds.load('oxford_iiit_pet', split='train',  shuffle_files=True)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1774324233702,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,5 +8,6 @@\n import tensorflow as tf\n import tensorflow_datasets as tfds\n import matplotlib.pyplot as plt\n \n-dataset = tfds.load('oxford_iiit_pet', split='train',  shuffle_files=True)\n\\ No newline at end of file\n+tfds.list_builders()\n+# dataset = tfds.load('oxford_iiit_pet', split='train',  shuffle_files=True)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1774324279500,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,6 +8,6 @@\n import tensorflow as tf\n import tensorflow_datasets as tfds\n import matplotlib.pyplot as plt\n \n-tfds.list_builders()\n-# dataset = tfds.load('oxford_iiit_pet', split='train',  shuffle_files=True)\n\\ No newline at end of file\n+# tfds.list_builders()\n+dataset = tfds.load('oxford_iiit_pet', split='train',  shuffle_files=True)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1774324663794,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,5 +9,7 @@\n import tensorflow_datasets as tfds\n import matplotlib.pyplot as plt\n \n # tfds.list_builders()\n-dataset = tfds.load('oxford_iiit_pet', split='train',  shuffle_files=True)\n\\ No newline at end of file\n+dataset = tfds.load('oxford_iiit_pet', split='train',  shuffle_files=True)\n+assert isinstance(dataset, tf.data.Dataset)\n+print(dataset)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1774324791825,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,15 +1,20 @@\n+###\n # References:\n # https://www.tensorflow.org/datasets/catalog/oxford_iiit_pet\n # https://www.tensorflow.org/datasets/overview\n \n+###\n \n \n \n import tensorflow as tf\n import tensorflow_datasets as tfds\n import matplotlib.pyplot as plt\n \n # tfds.list_builders()\n-dataset = tfds.load('oxford_iiit_pet', split='train',  shuffle_files=True)\n\\ No newline at end of file\n+train, test = tfds.load('oxford_iiit_pet',  shuffle_files=True)\n+\n assert isinstance(dataset, tf.data.Dataset)\n-print(dataset)\n+print(dataset)\n+# <_PrefetchDataset element_spec={'file_name': TensorSpec(shape=(), dtype=tf.string, name=None), 'head_bbox': TensorSpec(shape=(4,), dtype=tf.float32, name=None), 'image': TensorSpec(shape=(None, None, 3), dtype=tf.uint8, name=None), 'label': TensorSpec(shape=(), dtype=tf.int64, name=None), 'segmentation_mask': TensorSpec(shape=(None, None, 1), dtype=tf.uint8, name=None), 'species': TensorSpec(shape=(), dtype=tf.int64, name=None)}>\n+\n"
+                },
+                {
+                    "date": 1774324799300,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,8 +13,8 @@\n \n # tfds.list_builders()\n train, test = tfds.load('oxford_iiit_pet',  shuffle_files=True)\n \n-assert isinstance(dataset, tf.data.Dataset)\n-print(dataset)\n+assert isinstance(train, tf.data.Dataset)\n+print(train)\n # <_PrefetchDataset element_spec={'file_name': TensorSpec(shape=(), dtype=tf.string, name=None), 'head_bbox': TensorSpec(shape=(4,), dtype=tf.float32, name=None), 'image': TensorSpec(shape=(None, None, 3), dtype=tf.uint8, name=None), 'label': TensorSpec(shape=(), dtype=tf.int64, name=None), 'segmentation_mask': TensorSpec(shape=(None, None, 1), dtype=tf.uint8, name=None), 'species': TensorSpec(shape=(), dtype=tf.int64, name=None)}>\n \n"
+                },
+                {
+                    "date": 1774324830313,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,8 +13,5 @@\n \n # tfds.list_builders()\n train, test = tfds.load('oxford_iiit_pet',  shuffle_files=True)\n \n-assert isinstance(train, tf.data.Dataset)\n-print(train)\n-# <_PrefetchDataset element_spec={'file_name': TensorSpec(shape=(), dtype=tf.string, name=None), 'head_bbox': TensorSpec(shape=(4,), dtype=tf.float32, name=None), 'image': TensorSpec(shape=(None, None, 3), dtype=tf.uint8, name=None), 'label': TensorSpec(shape=(), dtype=tf.int64, name=None), 'segmentation_mask': TensorSpec(shape=(None, None, 1), dtype=tf.uint8, name=None), 'species': TensorSpec(shape=(), dtype=tf.int64, name=None)}>\n \n"
+                },
+                {
+                    "date": 1774324856490,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,7 +11,7 @@\n import tensorflow_datasets as tfds\n import matplotlib.pyplot as plt\n \n # tfds.list_builders()\n-train, test = tfds.load('oxford_iiit_pet',  shuffle_files=True)\n+train, test = tfds.load('oxford_iiit_pet',  shuffle_files=True, download=True)\n \n \n"
+                },
+                {
+                    "date": 1774325001226,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,5 +13,6 @@\n \n # tfds.list_builders()\n train, test = tfds.load('oxford_iiit_pet',  shuffle_files=True, download=True)\n \n-\n+ds, info = tfds.load('oxford_iiit_pet', split='train', with_info=True)\n+tfds.as_dataframe(ds.take(4), info)\n"
+                },
+                {
+                    "date": 1774325076224,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,5 +14,6 @@\n # tfds.list_builders()\n train, test = tfds.load('oxford_iiit_pet',  shuffle_files=True, download=True)\n \n ds, info = tfds.load('oxford_iiit_pet', split='train', with_info=True)\n-tfds.as_dataframe(ds.take(4), info)\n+# tfds.as_dataframe(ds.take(4), info)\n+fig = tfds.show_examples(ds, info)\n"
+                },
+                {
+                    "date": 1774325313131,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,10 +10,11 @@\n import tensorflow as tf\n import tensorflow_datasets as tfds\n import matplotlib.pyplot as plt\n \n+\n # tfds.list_builders()\n-train, test = tfds.load('oxford_iiit_pet',  shuffle_files=True, download=True)\n+train, test = tfds.load('oxford_iiit_pet',  shuffle_files=True, download=True, with_info=True)\n \n-ds, info = tfds.load('oxford_iiit_pet', split='train', with_info=True)\n+# ds, info = tfds.load('oxford_iiit_pet', split='train', with_info=True)\n # tfds.as_dataframe(ds.take(4), info)\n-fig = tfds.show_examples(ds, info)\n+# fig = tfds.show_examples(ds, info)\n"
+                },
+                {
+                    "date": 1774325351591,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,6 +15,6 @@\n # tfds.list_builders()\n train, test = tfds.load('oxford_iiit_pet',  shuffle_files=True, download=True, with_info=True)\n \n # ds, info = tfds.load('oxford_iiit_pet', split='train', with_info=True)\n-# tfds.as_dataframe(ds.take(4), info)\n+tfds.as_dataframe(train.take(1), info)\n # fig = tfds.show_examples(ds, info)\n"
+                },
+                {
+                    "date": 1774325407253,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,7 +14,8 @@\n \n # tfds.list_builders()\n train, test = tfds.load('oxford_iiit_pet',  shuffle_files=True, download=True, with_info=True)\n \n+print(train.shape())\n # ds, info = tfds.load('oxford_iiit_pet', split='train', with_info=True)\n-tfds.as_dataframe(train.take(1), info)\n-# fig = tfds.show_examples(ds, info)\n+# tfds.as_dataframe(train.take(1), info)\n+# fig = tfds.show_examples(train, info)\n"
+                },
+                {
+                    "date": 1774325417235,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,8 +14,8 @@\n \n # tfds.list_builders()\n train, test = tfds.load('oxford_iiit_pet',  shuffle_files=True, download=True, with_info=True)\n \n-print(train.shape())\n+print(train.shape)\n # ds, info = tfds.load('oxford_iiit_pet', split='train', with_info=True)\n # tfds.as_dataframe(train.take(1), info)\n # fig = tfds.show_examples(train, info)\n"
+                },
+                {
+                    "date": 1774325429868,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,8 +14,8 @@\n \n # tfds.list_builders()\n train, test = tfds.load('oxford_iiit_pet',  shuffle_files=True, download=True, with_info=True)\n \n-print(train.shape)\n+print(train.length)\n # ds, info = tfds.load('oxford_iiit_pet', split='train', with_info=True)\n # tfds.as_dataframe(train.take(1), info)\n # fig = tfds.show_examples(train, info)\n"
+                },
+                {
+                    "date": 1774325442435,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,8 +14,8 @@\n \n # tfds.list_builders()\n train, test = tfds.load('oxford_iiit_pet',  shuffle_files=True, download=True, with_info=True)\n \n-print(train.length)\n+print(train[1])\n # ds, info = tfds.load('oxford_iiit_pet', split='train', with_info=True)\n # tfds.as_dataframe(train.take(1), info)\n # fig = tfds.show_examples(train, info)\n"
+                },
+                {
+                    "date": 1774325502643,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,8 +14,12 @@\n \n # tfds.list_builders()\n train, test = tfds.load('oxford_iiit_pet',  shuffle_files=True, download=True, with_info=True)\n \n-print(train[1])\n+for example in train:\n+    print(list(example.keys()))\n+    image = example[\"image\"]\n+    label = example[\"label\"]\n+    print(image.shape, label)\n # ds, info = tfds.load('oxford_iiit_pet', split='train', with_info=True)\n # tfds.as_dataframe(train.take(1), info)\n # fig = tfds.show_examples(train, info)\n"
+                },
+                {
+                    "date": 1774325524685,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n import matplotlib.pyplot as plt\n \n \n # tfds.list_builders()\n-train, test = tfds.load('oxford_iiit_pet',  shuffle_files=True, download=True, with_info=True)\n+data = tfds.load('oxford_iiit_pet',  shuffle_files=True, download=True, with_info=True)\n \n for example in train:\n     print(list(example.keys()))\n     image = example[\"image\"]\n"
+                },
+                {
+                    "date": 1774325530244,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n \n # tfds.list_builders()\n data = tfds.load('oxford_iiit_pet',  shuffle_files=True, download=True, with_info=True)\n \n-for example in train:\n+for example in data:\n     print(list(example.keys()))\n     image = example[\"image\"]\n     label = example[\"label\"]\n     print(image.shape, label)\n"
+                },
+                {
+                    "date": 1774325564929,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n import matplotlib.pyplot as plt\n \n \n # tfds.list_builders()\n-data = tfds.load('oxford_iiit_pet',  shuffle_files=True, download=True, with_info=True)\n+data = tfds.load('oxford_iiit_pet',  split='train', download=True, with_info=True)\n \n for example in data:\n     print(list(example.keys()))\n     image = example[\"image\"]\n"
+                },
+                {
+                    "date": 1774325583602,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n import matplotlib.pyplot as plt\n \n \n # tfds.list_builders()\n-data = tfds.load('oxford_iiit_pet',  split='train', download=True, with_info=True)\n+data = tfds.load('oxford_iiit_pet',  split='train')\n \n for example in data:\n     print(list(example.keys()))\n     image = example[\"image\"]\n"
+                },
+                {
+                    "date": 1774325616735,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,8 +13,9 @@\n \n \n # tfds.list_builders()\n data = tfds.load('oxford_iiit_pet',  split='train')\n+data = data.take(1)\n \n for example in data:\n     print(list(example.keys()))\n     image = example[\"image\"]\n"
+                }
+            ],
+            "date": 1774322770113,
+            "name": "Commit-0",
+            "content": ""
+        }
+    ]
+}
