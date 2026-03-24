@@ -1,0 +1,46 @@
+{
+    "sourceFile": ".vscode/settings.json",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 7,
+            "patches": [
+                {
+                    "date": 1774319871656,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1774319928253,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,4 @@\n {\n-    \"terminal.integrated.fontFamily\": \"Noteworthy\"\n+    \"terminal.integrated.fontFamily\": \"Noteworthy\",\n+    \"terminal.integrated.fontSize\": 17\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1774319965576,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,4 @@\n {\n     \"terminal.integrated.fontFamily\": \"Noteworthy\",\n-    \"terminal.integrated.fontSize\": 17\n+    \"terminal.integrated.fontSize\": 16\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1774320006626,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,4 @@\n {\n     \"terminal.integrated.fontFamily\": \"Noteworthy\",\n-    \"terminal.integrated.fontSize\": 16\n+    \"terminal.integrated.fontSize\": 15\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1774320035280,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,4 @@\n {\n     \"terminal.integrated.fontFamily\": \"Noteworthy\",\n-    \"terminal.integrated.fontSize\": 15\n+    \"terminal.integrated.fontSize\": 13\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1774320064269,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,4 @@\n {\n     \"terminal.integrated.fontFamily\": \"Noteworthy\",\n-    \"terminal.integrated.fontSize\": 13\n+    \"terminal.integrated.fontSize\": 12\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1774320155640,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,4 @@\n {\n-    \"terminal.integrated.fontFamily\": \"Noteworthy\",\n+    \"terminal.integrated.fontFamily\": \"Sign\",\n     \"terminal.integrated.fontSize\": 12\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1774320209009,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,4 @@\n {\n-    \"terminal.integrated.fontFamily\": \"Sign\",\n-    \"terminal.integrated.fontSize\": 12\n+    \"terminal.integrated.fontFamily\": \"SignPainter\",\n+    \"terminal.integrated.fontSize\": 15\n }\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1774319871656,
+            "name": "Commit-0",
+            "content": "{\n    \"terminal.integrated.fontFamily\": \"Noteworthy\"\n}"
+        }
+    ]
+}
