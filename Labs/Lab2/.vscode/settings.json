@@ -1,0 +1,6 @@
+{
+  "editor.fontSize": 18,
+  "terminal.integrated.fontSize": 16,
+  "terminal.integrated.fontLigatures.enabled": true,
+  "terminal.integrated.fontFamily": "monospace"
+}
